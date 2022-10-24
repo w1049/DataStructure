@@ -30,7 +30,7 @@ class SinglyLinkedList : public List<T> {
         delete head;
     }
     void clear();
-    int length() const { return currentLength; };
+    int length() const { return currentLength; }
     void insert(int i, const T &x);
     void remove(int i);
     int search(const T &x) const;
