@@ -12,11 +12,11 @@ class SinglyLinkedList : public List<T> {
     struct node {
         T data;
         node *next;
-        node(const T &x, node *n = NULL) {
+        node(const T &x, node *n = nullptr) {
             data = x;
             next = n;
         }
-        node() : next(NULL) {}
+        node() : next(nullptr) {}
         ~node() {}
     };
     node *head;
@@ -62,7 +62,7 @@ void SinglyLinkedList<T>::insert(int i, const T &x) {
 template <class T>
 void SinglyLinkedList<T>::clear() {
     node *p = head->next, *q;
-    head->next = NULL;
+    head->next = nullptr;
     while (p) {
         q = p->next;
         delete p;
@@ -116,7 +116,7 @@ template <class T>
 void SinglyLinkedList<T>::reverse() {
     node *p = head->next->next, *pre = head->next, *q;
     // pre 为 i=0, p 为 i=1
-    pre->next = NULL; // 第一个变成最后一个
+    pre->next = nullptr; // 第一个变成最后一个
     while (p) {
         head->next = p; // p 暂时当第一个
         q = p->next; // 记录下一个
