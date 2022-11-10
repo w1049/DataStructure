@@ -45,6 +45,7 @@ T LinkedQueue<T>::deQueue() {
     node *tmp = front;
     T value = tmp->data;
     front = front->next;
+    if (front == nullptr) rear = nullptr;
     delete tmp;
     return value;
 }
